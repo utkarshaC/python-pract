@@ -1,0 +1,38 @@
+#textbox , buttons, labels
+from tkinter import*
+from tkinter import messagebox 
+top = Tk()
+top.title("Form")
+top.geometry("500x500")
+def hellomsg():
+    messagebox.showinfo("submited!!", "Hello, welcome")
+ab=StringVar()
+B1=Button(top,text="Submit",activebackground="#EB3324" ,command=hellomsg)
+r=Entry()
+r1=Entry()
+B2=Button(top,text="Reset")
+lab=Label(top, text="Name please")
+lab1=Label(top, text="Enter Your age")
+lab2=Label(top, text="Your Class is:")
+c1=Checkbutton(top,text="I have fulfill above details!", variable=ab)
+#c2=Checkbutton(top, text="Os", variable=ab)
+#c3=Checkbutton(top, text="DAA", variable=ab)
+#c4=Checkbutton(top, text="PP", variable=ab)
+#calling to above methods
+lab.pack()
+r.pack()
+lab1.pack()
+r1.pack()
+lab2.pack()
+Radiobutton(top, text="1st year", value="FY").pack()
+Radiobutton(top, text="2nd year", value="SY").pack()
+Radiobutton(top, text="3rd year", value="TY").pack()
+Radiobutton(top, text="4th year", value="CSE").pack()
+c1.pack()
+#c2.pack()
+#c3.pack()
+#c4.pack()
+B1.pack()
+B2.pack()
+
+top.mainloop()
